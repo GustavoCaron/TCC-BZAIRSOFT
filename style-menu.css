@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+html {    
+    background-color: #292929;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;        
+    color: #fff;
+}
+
+#cabecalho {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 35px;    
+    list-style: none;
+}
+
+ul li a {    
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #292929;
+    transition: 0.3s ease-in-out;
+}
+
+
+ul li .item:hover {
+    background-color: #964400; 
+    color: #292929;
+    border: 1px solid #FF7300;
+}
+
+
+
