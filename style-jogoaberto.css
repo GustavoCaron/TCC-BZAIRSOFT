@@ -1,0 +1,23 @@
+#jogo-aberto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    gap: 15px;
+}
+
+.valores {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.jogo-dia {
+    background: url(JOGO-MANHA.jpg) no-repeat center/cover;
+    filter: grayscale(90%);
+}
+
+.jogo-noite {
+    background: url(JOGO-NOITE.jpg) no-repeat center/cover;
+    filter: grayscale(100%);
+}
