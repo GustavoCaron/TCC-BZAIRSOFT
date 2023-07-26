@@ -1,8 +1,7 @@
 #jogo-aberto {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
     gap: 15px;
 }
 

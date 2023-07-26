@@ -1,39 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
-html {    
-    background-color: #292929;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 20px;        
-    color: #fff;
-}
-
-#cabecalho {
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     justify-content: center;
-}
-
-.menu {
-    display: flex;
-    text-decoration: none;
     align-items: center;
-    gap: 25px;    
-    list-style: none;
+    gap: 25px;
+    background-color: #292929;
+    border-bottom: 1px solid #FF7300;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
 }
-
-ul li a {    
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #292929;
-    transition: 0.3s ease-in-out;
-}
-
-
-ul li .item:hover {
-    background-color: #964400; 
-    color: #292929;
-    border: 1px solid #FF7300;
-}
-
-
-

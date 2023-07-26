@@ -3,8 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
-    scroll-behavior: smooth;
 }
 
 .cards {
@@ -30,10 +28,6 @@
     flex-direction: column;
     text-align: center;
     gap: 35px;
-}
-
-.plano-basico ul, .plano-premium ul {
-    list-style: none;
 }
 
 .basico {
