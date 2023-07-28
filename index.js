@@ -1,12 +1,32 @@
-let menu = document.getElementsByClassName('lista-cabecalho')
-console.log(menu)
+// ADICIONAR BORDA AO CONTEUDO SELECIONADO NO MENU
 
-// menu.addEventListener('click', () => {
-//     alert('clicou')
-// })
-    
-for (let i = 0; i < menu.length; i++) {
-    menu[i].addEventListener('click', () => {
-        menu[i].classList.add('selecionado')
-    });
+const menu = document.querySelectorAll('.lista-cabecalho')
+const secoes = document.querySelectorAll('section')
+
+menu.forEach((botoes) => {
+    botoes.addEventListener('click', () => {
+        removerClasseSelecionado()
+        adicionarClasseSelecionado(botoes)
+        aparecerSecao(menu)
+    })
+})
+
+// function aparecerSecao(menu){
+//     menu.forEach((secoes, index) => {
+//         if(menu[index].classList.contains('selecionar')){
+//             secoes[]
+//         }
+//     })
+// }
+
+function adicionarClasseSelecionado(botoes){
+    botoes.classList.add('selecionar')
+}
+
+function removerClasseSelecionado(){
+    menu.forEach(botoes => {
+        if(botoes.classList.contains('selecionar')){
+            botoes.classList.remove('selecionar')
+        }
+    })
 }
