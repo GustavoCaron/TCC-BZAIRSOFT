@@ -12,11 +12,11 @@
 }
 
 .jogo-dia {
-    background: url(JOGO-MANHA.jpg) no-repeat center/cover;
+    background: url(../images/JOGO-MANHA.jpg) no-repeat center/cover;
     filter: grayscale(90%);
 }
 
 .jogo-noite {
-    background: url(JOGO-NOITE.jpg) no-repeat center/cover;
+    background: url(../images/JOGO-NOITE.jpg) no-repeat center/cover;
     filter: grayscale(100%);
 }

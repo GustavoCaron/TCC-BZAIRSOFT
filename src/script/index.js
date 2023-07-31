@@ -21,9 +21,6 @@ function removerClasseSelecionado(){
 
 function adicionarClasseSelecionado(botoes){
     botoes.classList.add('selecionar')
-    if(menu[2].classList.contains('selecionar')){
-        menu[2].classList.remove('selecionar')
-    }
 }
 
 //ALTERAR O DISPLAY DA SEÇÃO

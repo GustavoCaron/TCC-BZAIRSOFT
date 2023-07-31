@@ -31,12 +31,12 @@
 }
 
 .basico {
-    background: url(basico.jpg) no-repeat center/cover;
+    background: url(../images/basico.jpg) no-repeat center/cover;
     filter: grayscale(100%);
 }
 
 .premium {
-    background: url(premium.jpg) no-repeat center/cover;
+    background: url(../images/premium.jpg) no-repeat center/cover;
     filter: grayscale(100%);
 }
 

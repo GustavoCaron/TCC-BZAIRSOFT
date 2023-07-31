@@ -13,12 +13,9 @@ html {
     flex-direction: column;
 }
 
-
-
 .titulo {
     color: #ff7300;
 }
-
 
 .lista {
     padding: 10px;
