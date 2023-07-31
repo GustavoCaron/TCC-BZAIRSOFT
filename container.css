@@ -13,6 +13,8 @@ html {
     flex-direction: column;
 }
 
+
+
 .titulo {
     color: #ff7300;
 }
@@ -33,7 +35,4 @@ html {
     border: 1px solid #ff7300;
 }
 
-.mostrar {
-    display: flex;
-}
 

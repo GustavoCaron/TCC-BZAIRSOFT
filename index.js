@@ -1,5 +1,4 @@
 // ADICIONAR BORDA AO CONTEUDO SELECIONADO NO MENU
-
 const menu = document.querySelectorAll('.lista-cabecalho')
 const secoes = document.querySelectorAll('section')
 
@@ -7,21 +6,10 @@ menu.forEach((botoes) => {
     botoes.addEventListener('click', () => {
         removerClasseSelecionado()
         adicionarClasseSelecionado(botoes)
-        aparecerSecao(menu)
+        desativarDisplay()
+        ativarDisplay()
     })
 })
-
-// function aparecerSecao(menu){
-//     menu.forEach((secoes, index) => {
-//         if(menu[index].classList.contains('selecionar')){
-//             secoes[]
-//         }
-//     })
-// }
-
-function adicionarClasseSelecionado(botoes){
-    botoes.classList.add('selecionar')
-}
 
 function removerClasseSelecionado(){
     menu.forEach(botoes => {
@@ -29,4 +17,28 @@ function removerClasseSelecionado(){
             botoes.classList.remove('selecionar')
         }
     })
+}
+
+function adicionarClasseSelecionado(botoes){
+    botoes.classList.add('selecionar')
+    if(menu[2].classList.contains('selecionar')){
+        menu[2].classList.remove('selecionar')
+    }
+}
+
+//ALTERAR O DISPLAY DA SEÇÃO
+function ativarDisplay(){
+    for(var i = 0; i < menu.length; i++){
+        if(menu[i].classList.contains('selecionar')){
+            secoes[i].style.display = 'flex'
+        }
+    }
+}
+
+function desativarDisplay(){
+    for(var i = 0; i < secoes.length; i++){
+        if(secoes[i].style.display = 'flex'){
+            secoes[i].style.display = 'none'
+        }
+    }
 }
