@@ -1,21 +1,19 @@
-//Importando o FramemeWork Express
-const express = require('express')
+const express = require('express');
+const path = require('path');
 const app = express();
 
-//Se URL for /, enviaram o Homepage)
-app.get('/', (res, res)=> {
-    res.send('home page')
-})
+// Definindo o caminho absoluto para a pasta "TCC-BZAIRSOFT"
+const absolutePath = path.join(__dirname, '../../../TCC-BZAIRSOFT');
 
-//Rota com parametros (Caso use alguem hora)
+// Configurando o diretório público para servir os arquivos estáticos
+app.use(express.static(absolutePath));
 
-//app.get('/usuario/:name', (req, res)=> {
- // const name = req.params.name;
- // res.send(req.params) 
-//})
+// Rota para a página inicial (index.html)
+app.get('/', (req, res) => {
+  res.sendFile(path.join(absolutePath, 'index.html'));
+});
 
-//Definindo a Rota do servidor
+// Definindo a Rota do servidor
 app.listen(3000, () => {
-    console.log('Servidor Em execução em http://localhost:3000');
-})
-
+  console.log('Servidor Em execução em http://localhost:3000');
+});
