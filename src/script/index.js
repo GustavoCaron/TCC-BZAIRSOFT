@@ -1,41 +1,17 @@
-// ADICIONAR BORDA AO CONTEUDO SELECIONADO NO MENU
-const menu = document.querySelectorAll('.lista-cabecalho')
-const secoes = document.querySelectorAll('section')
+const http = require('http');
 
-menu.forEach((botoes) => {
-    botoes.addEventListener('click', () => {
-        removerClasseSelecionado()
-        adicionarClasseSelecionado(botoes)
-        desativarDisplay()
-        ativarDisplay()
-    })
-})
+const server = http.createServer((req, res) => {
 
-function removerClasseSelecionado(){
-    menu.forEach(botoes => {
-        if(botoes.classList.contains('selecionar')){
-            botoes.classList.remove('selecionar')
-        }
-    })
-}
-
-function adicionarClasseSelecionado(botoes){
-    botoes.classList.add('selecionar')
-}
-
-//ALTERAR O DISPLAY DA SEÇÃO
-function ativarDisplay(){
-    for(var i = 0; i < menu.length; i++){
-        if(menu[i].classList.contains('selecionar')){
-            secoes[i].style.display = 'flex'
-        }
+   res.setHeader('Content-Type', 'text/plain');
+   if (req.url === '/') {
+        res.statusCode = 200;
+        res.end('Home page');
+    } else (req.url === '/about');  {
+        res.statusCode = 200;
+        res.end('About')
     }
-}
+});
 
-function desativarDisplay(){
-    for(var i = 0; i < secoes.length; i++){
-        if(secoes[i].style.display = 'flex'){
-            secoes[i].style.display = 'none'
-        }
-    }
-}
+server.listen(3000, () => {
+ console.log(`Servidor em execução em http://localhost:3000/`);
+});
