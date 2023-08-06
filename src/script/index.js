@@ -1,11 +1,11 @@
-const http = require('http');
+const http = require('http'); //Colocando HTTP no servidor
 
 const server = http.createServer((req, res) => {
 
    res.setHeader('Content-Type', 'text/plain');
    if (req.url === '/') {
-        res.statusCode = 200;
-        res.end('Home page');
+        res.statusCode = 200; // Status OK 
+        res.end('Home page'); //Escreve Home Page 
     } else (req.url === '/about');  {
         res.statusCode = 200;
         res.end('About')
